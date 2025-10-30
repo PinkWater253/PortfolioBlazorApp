@@ -1,0 +1,124 @@
+﻿@page "/calculator"
+@using System.ComponentModel.DataAnnotations
+
+<h3>Máy Tính Bỏ Túi</h3>
+
+@*
+    1. Đổi "OnInvalidSubmit" thành "OnValidSubmit": Chúng ta chỉ tính toán khi dữ liệu HỢP LỆ.
+    2. Thêm <DataAnnotationsValidator />: Bắt buộc phải có để kích hoạt validation.
+*@
+<EditForm Model="@calModel" OnValidSubmit="HandleValidSubmit" class="p-3 border rounded">
+    <DataAnnotationsValidator />
+
+    <table class="table table-borderless">
+        <tbody>
+            <tr>
+                <td style="width: 100px;">Số hạng 1:</td>
+                <td><InputNumber @bind-Value="calModel.So1" class="form-control" /></td>
+                <td><ValidationMessage For="@(() => calModel.So1)" class="text-danger" /></td>
+            </tr>
+            <tr>
+                <td>Số hạng 2:</td>
+                <td><InputNumber @bind-Value="calModel.So2" class="form-control" /></td>
+                <td><ValidationMessage For="@(() => calModel.So2)" class="text-danger" /></td>
+            </tr>
+            <tr>
+                <td>Phép toán:</td>
+                <td colspan="2">
+                    @*
+                        3. Đặt "PhepToan" bằng @onclick TRƯỚC KHI form submit.
+                           Tất cả các nút đều là "type=submit" để kích hoạt OnValidSubmit.
+                    *@
+                    <button type="submit" class="btn btn-primary me-2" @onclick="() => calModel.PhepToan = '+'">+</button>
+                    <button type="submit" class="btn btn-danger me-2" @onclick="() => calModel.PhepToan = '-'">-</button>
+                    <button type="submit" class="btn btn-success me-2" @onclick="() => calModel.PhepToan = '*'">*</button>
+                    <button type="submit" class="btn btn-info me-2" @onclick="() => calModel.PhepToan = '/'">/</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</EditForm>
+
+@* HIỂN THỊ KẾT QUẢ HOẶC LỖI *@
+@if (isSubmitted)
+{
+    <hr />
+    <div class="alert alert-success mt-3">
+        <h4 class="alert-heading">Kết Quả:</h4>
+        <h2 class="text-primary">@calModel.Ketqua</h2>
+    </div>
+}
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <hr />
+    <div class="alert alert-danger mt-3">
+        @errorMessage
+    </div>
+}
+
+
+@code {
+
+    // Sửa lỗi Model:
+    // 1. "Ketqua" không cần [Required] vì nó là giá trị đầu ra, không phải đầu vào.
+    // 2. Thêm "PhepToan" để biết người dùng đã nhấn nút nào.
+    public class CalculatorModel
+    {
+        [Required(ErrorMessage = "Vui lòng nhập số hạng 1")]
+        public double? So1 { get; set; }
+
+        [Required(ErrorMessage = "Vui lòng nhập số hạng 2")]
+        public double? So2 { get; set; }
+
+        public double? Ketqua { get; set; }
+
+        public char PhepToan { get; set; }
+    }
+
+    private bool isSubmitted = false;
+    private string errorMessage = string.Empty;
+    private CalculatorModel calModel = new CalculatorModel();
+
+    // Hàm này chỉ được gọi KHI CẢ So1 VÀ So2 đều hợp lệ
+    private void HandleValidSubmit()
+    {
+        // Reset trạng thái
+        isSubmitted = false;
+        errorMessage = string.Empty;
+
+        // .Value an toàn để gọi vì OnValidSubmit đảm bảo chúng không bị null
+        double so1 = calModel.So1.Value;
+        double so2 = calModel.So2.Value;
+
+        switch (calModel.PhepToan)
+        {
+            case '+':
+                calModel.Ketqua = so1 + so2;
+                break;
+            case '-':
+                calModel.Ketqua = so1 - so2;
+                break;
+            case '*':
+                calModel.Ketqua = so1 * so2;
+                break;
+            case '/':
+                if (so2 == 0)
+                {
+                    errorMessage = "Lỗi: Không thể chia cho 0!";
+                }
+                else
+                {
+                    calModel.Ketqua = so1 / so2;
+                }
+                break;
+        }
+
+        // Chỉ hiển thị kết quả nếu không có lỗi logic (như chia cho 0)
+        if (string.IsNullOrEmpty(errorMessage))
+        {
+            isSubmitted = true;
+        }
+
+    }
+}
