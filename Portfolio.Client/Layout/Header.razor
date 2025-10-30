@@ -1,0 +1,40 @@
+﻿@* Navbar trắng - xanh sử dụng Bootstrap 5 *@
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container-fluid">
+
+        <a class="navbar-brand fw-bold text-danger d-flex align-items-center mx-5" href="#">
+            Hào Copider
+        </a>
+        <button class="navbar-toggler" type="button" @onclick="ToggleNavMenu" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="@NavMenuCssClass" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-black fw-semibold" href="#hero">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark fw-semibold" href="#about">Tiểu sử</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark fw-semibold" href="#portfolio">Dự án</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark fw-semibold" href="#contact">Liên hệ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+@code {
+    private bool isNavCollapsed = true;
+
+    private string NavMenuCssClass => isNavCollapsed ? "collapse navbar-collapse" : "navbar-collapse";
+
+    private void ToggleNavMenu()
+    {
+        isNavCollapsed = !isNavCollapsed;
+    }
+}

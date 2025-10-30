@@ -1,0 +1,612 @@
+﻿@page "/"
+@using System.ComponentModel.DataAnnotations
+
+<PageTitle>Home</PageTitle>
+<section id="hero" class="hero section">
+    <div class="container">
+        <div class="row g-0 align-items-center">
+
+            <div class="col-lg-6 hero-content">
+                <div class="content-wrapper">
+                    <h1 class="hero-title">Wellcome<span class="typed" data-typed-items="Designer, Developer, Freelancer, Artist"></span></h1>
+                    <p class="lead">Xin chào, tôi là một .NET Developer, đam mê phát triển phần mềm và luôn tìm cách tạo ra những giải pháp hiệu quả trên nền tảng .NET.</p>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="purecounter">25</span>
+                            <span class="stat-label">Dự án thực hiện</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="purecounter">3</span>
+                            <span class="stat-label">Kinh nghiệm</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="purecounter">2004</span>
+                            <span class="stat-label">Yêu thích</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#portfolio" class="btn btn-primary">Dự án của tôi</a>
+                        <a href="#contact" class="btn btn-outline">Liên hệ</a>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/pnhao544" target="_blank"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.tiktok.com/@@pnhao544" target="_blank"><i class="bi bi-tiktok"></i></a>
+                        <a href="#"><i class="bi bi-github" target="_blank"></i></a>
+                        <a href="#"><i class="bi bi-instagram" target="_blank"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 hero-image">
+                <div class="image-container">
+                    <div class="floating-elements">
+                        <div class="floating-card card-1">
+                            <i class="bi bi-filetype-html"></i>
+                            <span>Web App</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <i class="bi bi-window-desktop"></i>
+                            <span>Desktop App</span>
+                        </div>
+                        <div class="floating-card card-3">
+                            <i class="bi bi-phone"></i>
+                            <span>Moblie App</span>
+                        </div>
+                    </div>
+                    <img src="img/profile/avt.png" alt="Portfolio Hero" class="img-fluid hero-main-image">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about section">
+
+    <!-- Section Title -->
+    <div class="container section-title">
+        <h2>Tiểu sử</h2>
+        <p>Dưới đây là phần tóm tắt về tôi</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" >
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-5" >
+                <div class="profile-image-wrapper">
+                    <div class="profile-image">
+                        <img src="https://scontent.fsgn2-7.fna.fbcdn.net/v/t39.30808-6/555533072_777582791693884_9966602302734525_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=u8e5NCRVdOQQ7kNvwH1WkUx&_nc_oc=AdlVSsC1fgHfpxZ6CrVasE59Ll8TifMHZdXbcgFPRympEH-qFUDPNVOn_gzkYwPhZ5U9-Bxv2qL8XXfOzrxvONh9&_nc_zt=23&_nc_ht=scontent.fsgn2-7.fna&_nc_gid=9khBS6UQlyqUhr1XOOhjYw&oh=00_AfZieMsOqqfIrWOxp7MK9pX2flV8bxLrkWYAbs1-U48ejg&oe=68E43330" alt="Profile" class="img-fluid">
+                    </div>
+                    <div class="signature-section">
+                        <img src="img/profile/signature.png" alt="Signature" class="signature">
+                        <p class="quote">Hiện thực ý tưởng thành sản phẩm.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7" >
+                <div class="about-content">
+                    <div class="intro">
+                        <h2>Xin chào, tôi là Phan Nhựt Hào - .NET developer</h2>
+                        <p>Từ khi còn là sinh viên CNTT, tôi đã có sự yêu thích với ngôn ngữ lập trình C#. Với niềm đam mê, tôi đã tìm hiểu, học hỏi, và cách xây dựng các ứng dụng trong hệ hinh thái NET Microsoft.</p>
+                    </div>
+
+                    <div class="skills-grid">
+                        <div class="skill-item" >
+                            <div class="skill-icon">
+                                <i class="bi bi-palette"></i>
+                            </div>
+                            <h4>Software developer</h4>
+                            <p>Xây dựng ứng dụng với ASP.NET, .NET MAUI, .NET</p>
+                        </div>
+                        <div class="skill-item" >
+                            <div class="skill-icon">
+                                <i class="bi bi-code-slash"></i>
+                            </div>
+                            <h4>Backend Dev</h4>
+                            <p>Sử dụng C# là ngôn ngữ lập trình chính</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="bi bi-tiktok"></i>
+                            </div>
+                            <h4>Content Creator</h4>
+                            <p>Làm clip để chia sẽ kinh nghiệm của bản thân</p>
+                        </div>
+                    </div>
+
+                    <div class="journey-timeline">
+                        <div class="timeline-item">
+                            <div class="year">2022</div>
+                            <div class="description">Bắt đầu hành trình với việc trở thành tân sinh viên ngành CNTT, Đại học Nha Trang</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="year">2023</div>
+                            <div class="description">Được tiếp xúc với ngôn ngữ C#, đặt nền móng cho niềm đam mê NET</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="year">2024</div>
+                            <div class="description">Bắt đầu xây dựng các ứng dụng NET: web app với ASP.NET; desktop app(Winform, WPF) với .NET, WinUI; mobile app với .NET MAUI, Flutter </div>
+                        </div>
+                    </div>
+
+                    <div class="cta-section">
+                        <div class="fun-fact">
+                            <span class="emoji">☕</span>
+                            <span class="text">Một tách cà phê khi làm việc là tuyệt vời nhất!</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="#portfolio" class="btn btn-primary">Dự án của tôi</a>
+                            <a href="#" class="btn btn-outline">Tải CV.pdf</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section><!-- /About Section -->
+
+<!-- Skills Section -->
+<section id="skills" class="skills section">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="skills-grid">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <i class="bi bi-app-indicator"></i>
+                                    <h3>Ứng dụng</h3>
+                                </div>
+                                <div class="skills-animation">
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">Web App(Blazor/MVC)</span>
+                                            <span class="skill-percentage">95%</span>
+                                        </div>
+                                        <div class="skill-bar progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">Desktop App(Winform, WPF, WinUI)</span>
+                                            <span class="skill-percentage">88%</span>
+                                        </div>
+                                        <div class="skill-bar progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">Mobile App(MAUI, Flutter)</span>
+                                            <span class="skill-percentage">82%</span>
+                                        </div>
+                                        <div class="skill-bar progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End Frontend Card -->
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <i class="bi bi-translate"></i>
+                                    <h3>Ngôn ngữ lập trình</h3>
+                                </div>
+                                <div class="skills-animation">
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">C#</span>
+                                            <span class="skill-percentage">99%</span>
+                                        </div>
+                                        <div class="skill-bar progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">PHP</span>
+                                            <span class="skill-percentage">75%</span>
+                                        </div>
+                                        <div class="skill-bar progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">Dark</span>
+                                            <span class="skill-percentage">72%</span>
+                                        </div>
+                                        <div class="skill-bar progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End Backend Card -->
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <i class="bi bi-database-check"></i>
+                                    <h3>Cơ sở dữ liệu</h3>
+                                </div>
+                                <div class="skills-animation">
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">SQL Server</span>
+                                            <span class="skill-percentage">85%</span>
+                                        </div>
+                                        <div class="skill-bar progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">MySQL</span>
+                                            <span class="skill-percentage">70%</span>
+                                        </div>
+                                        <div class="skill-bar progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">SQLite</span>
+                                            <span class="skill-percentage">68%</span>
+                                        </div>
+                                        <div class="skill-bar progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End Design Card -->
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <i class="bi bi-cloud"></i>
+                                    <h3>Framework</h3>
+                                </div>
+                                <div class="skills-animation">
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">.NET (Core → 5/6/7/8)</span>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="skill-bar progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">ASP.NET Core</span>
+                                            <span class="skill-percentage">80%</span>
+                                        </div>
+                                        <div class="skill-bar progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">Flutter</span>
+                                            <span class="skill-percentage">70%</span>
+                                        </div>
+                                        <div class="skill-bar progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End DevOps Card -->
+                        </div>
+                    </div>
+                </div><!-- End Skills Grid -->
+            </div>
+
+            <div class="col-lg-4">
+                <div class="skills-summary" >
+                    <h3>Thành tựu</h3>
+                    <p>Một số điểm nổi bật</p>
+
+                    <div class="summary-stats">
+                        <div class="stat-item" >
+                            <div class="stat-circle">
+                                <i class="bi bi-trophy"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">3+</span>
+                                <span class="stat-label">Kinh nghiệm</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-item">
+                            <div class="stat-circle">
+                                <i class="bi bi-diagram-3"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Dự án</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-item">
+                            <div class="stat-circle">
+                                <i class="bi bi-download"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">30+</span>
+                                <span class="stat-label">Lượt tải</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-badges">
+                        <h4>Chứng chỉ</h4>
+                        <div class="badge-list">
+                            <div class="skill-badge">MOS</div>
+                            <div class="skill-badge">W3S</div>
+                        </div>
+                    </div>
+                </div><!-- End Skills Summary -->
+            </div>
+        </div>
+
+    </div>
+
+</section><!-- /Skills Section -->
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio section">
+
+    <!-- Section Title -->
+    <div class="container section-title">
+        <h2>Portfolio</h2>
+        <p>Các sản phẩm đã thực hiện</p>
+    </div><!-- End Section Title -->
+
+    <div class="container-fluid" >
+
+        <div class="isotope-layout" >
+
+            <ul class="portfolio-filters isotope-filters" >
+                <li data-filter="*" class="filter-active">
+                    <i class="bi bi-grid-3x3"></i> Toàn bộ
+                </li>
+                <li data-filter=".filter-ui">
+                    Desktop App
+                </li>
+                <li data-filter=".filter-development">
+                    Web App
+                </li>
+                <li data-filter=".filter-photography">
+                    Mobile App
+                </li>
+            </ul>
+
+            <div class="row g-4 isotope-container">
+
+                @* @if (projects == null)
+                {
+                    <p><em>Đang tải dự án...</em></p>
+                }
+                else
+                {
+                    @foreach (var project in projects)
+                    {
+                        // Bắt đầu Portfolio Item
+                        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
+                            <article class="portfolio-entry">
+                                <figure class="entry-image">
+                        
+                                    <img src="@project.ImageMainUrl" class="img-fluid" alt="@project.Title" loading="lazy">
+                        
+                                    <div class="entry-overlay">
+                                        <div class="overlay-content">
+                                            <div class="entry-meta">
+                                                @foreach (var pt in project.ProjectTechnologies)
+                                                {
+                                                    <span class="badge bg-secondary me-1">@pt.Technology.Name</span>
+                                                }
+                                            </div>
+                                
+                                            <h3 class="entry-title">@project.Title</h3>
+                                
+                                            <div class="entry-links">
+                                    
+                                                <a href="@project.ImageMainUrl" class="glightbox" data-gallery="portfolio-gallery-@project.Slug" data-glightbox="title: @project.Title; description: @project.ShortDescription;">
+                                                    <i class="bi bi-arrows-angle-expand"></i>
+                                                </a>
+                                    
+                                                <a href="/project/@project.Id">
+                                                    <i class="bi bi-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </figure>
+                            </article>
+                        </div>}
+                }
+ *@
+            </div>
+        </div>
+
+    </div>
+
+</section><!-- /Portfolio Section -->
+
+<!-- Contact Section -->
+<section id="contact" class="contact section light-background">
+
+    <!-- Section Title -->
+    <div class="container section-title">
+        <h2>Liên hệ/ Hợp tác</h2>
+        <p>Thông tin liên hệ nếu bạn có yêu cầu</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+        <div class="row g-4 g-lg-5">
+            <div class="col-lg-5">
+                <div class="info-box">
+                    <h3>Liên hệ</h3>
+                    <p>Thông tin liên hệ</p>
+
+                    <div class="info-item">
+                        <div class="icon-box">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <div class="content">
+                            <h4>Địa chỉ</h4>
+                            <p>Đường vào tim em</p>
+                            <p>Ôi băng giá</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon-box">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+                        <div class="content">
+                            <h4>Số điện thoại</h4>
+                            <p>1 2 3 4 ngày có chắc nỗi nhớ sẽ biến mất đi</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="icon-box">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div class="content">
+                            <h4>Địa chỉ Email</h4>
+                            <p>hao.pn.64cntt@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="contact-form">
+                    <h3>Liên hệ</h3>
+                    <p>Vui lòng gửi yêu cầu theo biểu mẫu sau:</p>
+
+                    <EditForm method="post" Model="@contactModel" OnValidSubmit="HandleValidSubmit" class="php-email-form">
+                        <div class="row gy-4">
+                            <DataAnnotationsValidator />
+                            <div class="col-md-6">
+                                <InputText id="name" @bind-Value="contactModel.Ten" class="form-control" placeholder="Họ tên"/>
+                                <ValidationMessage For="@(() => contactModel.Ten)" class="text-danger" />
+                            </div>
+
+                            <div class="col-md-6 ">
+                                <InputText id="email" @bind-Value="contactModel.Email" class="form-control" placeholder="Email" />
+                                <ValidationMessage For="@(() => contactModel.Email)" class="text-danger" />
+                            </div>
+
+                            <div class="col-12">
+                                <InputText id="email" @bind-Value="contactModel.TieuDe" class="form-control" placeholder="Tiêu đề" />
+                                <ValidationMessage For="@(() => contactModel.TieuDe)" class="text-danger" />
+                            </div>
+
+                            <div class="col-12">
+                                <InputTextArea id="message" @bind-Value="contactModel.NoiDung" class="form-control" rows="6" placeholder="Nội dung" />
+                                <ValidationMessage For="@(() => contactModel.NoiDung)" class="text-danger" />
+                            </div>
+
+                            <div class="col-12 text-center">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                @if (!string.IsNullOrEmpty(submissionMessage))
+                                {
+                                    <div style="color: green; font-weight: bold;">@submissionMessage</div>
+                                }
+                                <button type="submit" class="btn">Gửi</button>
+                            </div>
+
+                        </div>
+                    </EditForm>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section><!-- /Contact Section -->
+
+@code {
+    // private List<Project>? projects;
+
+    // protected override async Task OnInitializedAsync()
+    // {
+    //     try
+    //     {
+    //         Gọi endpoint API (Đảm bảo API đang chạy!)
+    //         projects = await Http.GetFromJsonAsync<List<Project>>("api/projects");
+    //     }
+    //     catch (HttpRequestException ex)
+    //     {
+    //         Console.WriteLine($"Lỗi khi gọi API: {ex.Message}");
+    //         Thường là lỗi CORS hoặc API chưa khởi động
+    //         projects = new List<Project>();
+    //     }
+    // }
+
+    public class ContactModel
+    {
+        [Required(ErrorMessage = "Vui lòng nhập họ và tên của bạn.")]
+        [StringLength(100, ErrorMessage = "Tên không được vượt quá 100 ký tự.")]
+        public string Ten { get; set; }
+
+        [Required(ErrorMessage = "Vui lòng nhập địa chỉ email.")]
+        [EmailAddress(ErrorMessage = "Địa chỉ email không hợp lệ.")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "Vui lòng nhập tiêu đề thư.")]
+        [StringLength(100, MinimumLength = 5, ErrorMessage = "Tiêu đề phải có từ 5 đến 100 ký tự.")]
+        public string TieuDe { get; set; }
+
+        [Required(ErrorMessage = "Vui lòng nhập nội dung tin nhắn.")]
+        [StringLength(500, ErrorMessage = "Nội dung không được vượt quá 500 ký tự.")]
+        public string NoiDung { get; set; }
+    }
+
+    // Khởi tạo một đối tượng từ Data Model
+    private ContactModel contactModel = new ContactModel();
+    private string submissionMessage = string.Empty;
+
+    // Hàm xử lý khi form hợp lệ và được gửi
+    private void HandleValidSubmit()
+    {
+        // 1. Logic xử lý dữ liệu form (ví dụ: Gửi email, lưu vào database, gọi API)
+        // Trong ví dụ này, chúng ta chỉ hiển thị thông báo.
+
+        submissionMessage = "Cảm ơn bạn, tin nhắn đã được gửi thành công!";
+    }
+}
